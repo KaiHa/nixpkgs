@@ -6,9 +6,9 @@ stdenv.mkDerivation rec {
 
   # We use fetchgit instead of fetchFromGitHub because of necessary git submodules
   src = fetchgit {
-    url = "https://github.com/Nitrokey/nitrokey-app.git";
-    rev = "refs/tags/v${version}";
-    sha256 = "0rana999qn7yicq7ims18qbklajg5f2s6k91xqhy7q6y0fn2rznh";
+    url = "https://github.com/KaiHa/nitrokey-app.git";
+    rev = "refs/heads/fix-misleading-indentation";
+    sha256 = "0hhcy9gs4hsigqghnyzrpsxivzn5y8wdn85ac3qqm6h4z38899pr";
   };
 
   buildInputs = [
