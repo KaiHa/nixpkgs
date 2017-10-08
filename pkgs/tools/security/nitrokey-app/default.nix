@@ -2,12 +2,13 @@
 
 stdenv.mkDerivation rec {
   name = "nitrokey-app";
-  version = "1.1";
+  version = "1.2-beta.2";
 
+  # We use fetchgit instead of fetchFromGitHub because of necessary git submodules
   src = fetchgit {
     url = "https://github.com/Nitrokey/nitrokey-app.git";
     rev = "refs/tags/v${version}";
-    sha256 = "11pz1p5qgghkr5f8s2wg34zqhxk2vq465i73w1h479j88x35rdp0";
+    sha256 = "0rana999qn7yicq7ims18qbklajg5f2s6k91xqhy7q6y0fn2rznh";
   };
 
   buildInputs = [
