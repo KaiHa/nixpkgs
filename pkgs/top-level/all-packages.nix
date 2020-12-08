@@ -16465,6 +16465,8 @@ in
 
   jitsi-videobridge = callPackage ../servers/jitsi-videobridge { };
 
+  jigasi = callPackage ../servers/jigasi { };
+
   kapow = callPackage ../servers/kapow { };
 
   keycloak = callPackage ../servers/keycloak { };
