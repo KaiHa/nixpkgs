@@ -11,6 +11,7 @@
   libXtst,
   coreutils,
   gnugrep,
+  openjfx21,
   zulu,
   preferGtk3 ? true,
   preferZulu ? true,
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     ant compile prepare-dist
     cp -Rv dist/{lib,davmail{,.jar}} .
     sed -i -e '/^JAVA_OPTS/d' davmail
+    sed -i 's|/usr/lib/jvm/openjfx|${openjfx21}|g' davmail
 
     runHook postBuild
   '';
